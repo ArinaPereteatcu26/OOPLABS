@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GuessTheNumberGame
+comment1.params=lowerBound\ upperBound
+comment1.target=GuessTheNumberGame(int,\ int)
+comment2.params=min\ max
+comment2.target=int\ generateRandomNumber(int,\ int)
+comment3.params=
+comment3.target=void\ play()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
