@@ -37,8 +37,6 @@ public class Main {
                 case "exit":
                     running = false;
                     break;
-                case "display":
-                    System.out.println(commit.getSnapshotTime());
                 default:
                     System.out.println("Invalid command");
             }
