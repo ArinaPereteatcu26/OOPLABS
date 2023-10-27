@@ -31,8 +31,8 @@ public class Main {
                     infoInteraction.execute(parts);
                     break;
                 case "status":
-                    Status statusAction = new Status(commit.getSnapshotTime());
-                    statusAction.execute(parts);
+                    Status status = new Status(commit.getSnapshotTime());
+                    status.execute(parts);
                     break;
                 case "exit":
                     running = false;
