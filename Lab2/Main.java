@@ -27,11 +27,11 @@ public class Main {
                     commit.execute(parts);
                     break;
                 case "info":
-                    InfoInteraction infoInteraction = new InfoInteraction();
+                    Info infoInteraction = new Info();
                     infoInteraction.execute(parts);
                     break;
                 case "status":
-                    StatusInteraction statusAction = new StatusInteraction(commit.getSnapshotTime());
+                    Status statusAction = new Status(commit.getSnapshotTime());
                     statusAction.execute(parts);
                     break;
                 case "exit":
