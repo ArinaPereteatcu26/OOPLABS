@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Info extends File {
+public class Info extends FileFile {
     private final String folderPath = "C:\\Users\\arina\\IdeaProjects\\OOPLABS\\Lab2\\files";
 
     @Override
@@ -33,7 +33,7 @@ public class Info extends File {
             System.out.println("Created Date: " + createdDate);
             System.out.println("Last Modified Date: " + dateFormat.format(new Date(file.lastModified())));
 
-            if (extension.equals("png") || extension.equals("jpg")) {
+            if (extension.equals("png") || extension.equals("jpg") || extension.equals("jpeg")) {
                 String imageSize = getImageDimensions(file);
                 System.out.println("Image Size: " + imageSize);
             } else if (extension.equals("txt")) {
@@ -65,21 +65,14 @@ public class Info extends File {
             return "N/A";
         }
     }
-
-    private int getImageSize(File file) {
-        return (int) file.length();
-    }
-
-    private int getLineCount(File file) {
-        try (Scanner scanner = new Scanner(file)) {
-            int lineCount = 0;
-            while (scanner.hasNextLine()) {
-                scanner.nextLine();
-                lineCount++;
-            }
-            return lineCount;
-        } catch (Exception e) {
-            return 0;
+    private String getImageDimensions(File file) {
+        try {
+            BufferedImage image = ImageIO.read(file);
+            int width = image.getWidth();
+            int height = image.getHeight();
+            return width + "x" + height;
+        } catch (IOException e) {
+            return "err";
         }
     }
 
@@ -129,7 +122,7 @@ public class Info extends File {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
-                if (line.startsWith("def ") || line.startsWith("public void ")) {
+                if (line.startsWith("def") || line.startsWith("public void ")) {
                     methodCount++;
                 }
             }
@@ -139,14 +132,17 @@ public class Info extends File {
         return methodCount;
     }
 
-    private String getImageDimensions(File file) {
-        try {
-            BufferedImage image = ImageIO.read(file);
-            int width = image.getWidth();
-            int height = image.getHeight();
-            return width + "x" + height;
-        } catch (IOException e) {
-            return "N/A";
+
+    private int getLineCount(File file) {
+        try (Scanner scanner = new Scanner(file)) {
+            int lineCount = 0;
+            while (scanner.hasNextLine()) {
+                scanner.nextLine();
+                lineCount++;
+            }
+            return lineCount;
+        } catch (Exception e) {
+            return 0;
         }
     }
 }

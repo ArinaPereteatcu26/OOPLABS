@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Date;
 
-public class Status extends File {
+public class Status extends FileFile {
     private Date lastSnapshotTime;
 
     public Status(Date lastSnapshotTime) {

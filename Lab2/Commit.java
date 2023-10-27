@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Date;
 
-public class Commit extends FileInteraction {
+public class Commit extends FileFile {
     private Date snapshotTime;
 
     public Commit() {
