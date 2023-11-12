@@ -1,8 +1,1 @@
-hello world
-
-
-miau
-
-tu
-
-za sto
+hello

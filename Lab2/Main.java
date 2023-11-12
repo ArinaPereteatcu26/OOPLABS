@@ -1,3 +1,7 @@
+import Behaviour.Commit;
+import Behaviour.Info;
+import Behaviour.Status;
+
 import java.io.File;
 import java.util.Scanner;
 
@@ -18,9 +22,9 @@ public class Main {
 
         while (running) {
             System.out.println("What do you want to do? ");
-            System.out.println("c - Commit");
-            System.out.println("i - Info ");
-            System.out.println("s - Status ");
+            System.out.println("c - Behaviour.Commit");
+            System.out.println("i - Behaviour.Info ");
+            System.out.println("s - Behaviour.Status ");
             System.out.println("q - Quit Program");
             System.out.println("Enter command: ");
             String input = scanner.nextLine();
