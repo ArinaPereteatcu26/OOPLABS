@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Info extends FileFile {
+  class Info extends FileFile {
     private final String folderPath = "C:\\Users\\arina\\IdeaProjects\\OOPLABS\\Lab2\\files";
 
     @Override
@@ -36,6 +36,7 @@ public class Info extends FileFile {
             if (extension.equals("png") || extension.equals("jpg") || extension.equals("jpeg")) {
                 String imageSize = getImageDimensions(file);
                 System.out.println("Image Size: " + imageSize);
+
             } else if (extension.equals("txt")) {
                 int lineCount = getLineCount(file);
                 int wordCount = getWordCount(file);
@@ -107,7 +108,7 @@ public class Info extends FileFile {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
-                if (line.startsWith("class ")) {
+                if (line.contains("class ")) {
                     classCount++;
                 }
             }
@@ -122,7 +123,7 @@ public class Info extends FileFile {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
-                if (line.startsWith("def") || line.startsWith("public void ")) {
+                if (line.contains("def") || line.contains("public void ")) {
                     methodCount++;
                 }
             }
