@@ -1,4 +1,4 @@
-public interface File {
+public interface FileInterf {
     int getLineCount(java.io.File file);
     int getWordCount(java.io.File file);
     int getCharacterCount(java.io.File file);
