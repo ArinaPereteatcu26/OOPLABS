@@ -22,6 +22,7 @@ public class Status extends FileFile {
             if (files != null) {
                 System.out.println("Created Snapshot at: " + lastSnapshotTime);
 
+
                 for (File file : files) {
                     Date lastModifiedTime = new Date(file.lastModified());
                     String status = (lastModifiedTime.after(lastSnapshotTime)) ? "Changed" : "No Change";
