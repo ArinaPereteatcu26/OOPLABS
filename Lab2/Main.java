@@ -1,7 +1,6 @@
 import Behaviour.Commit;
 import Behaviour.Info;
 import Behaviour.Status;
-
 import java.io.File;
 import java.util.Scanner;
 
