@@ -25,7 +25,7 @@ public class ArrayUpStack implements Stack{
             return -1;
         }
         int element = peek();
-        array[--size] = 0;
+        arr[--size] = 0;
         return element;
     }
 
