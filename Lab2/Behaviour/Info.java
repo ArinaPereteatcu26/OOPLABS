@@ -34,7 +34,7 @@ import java.util.Date;
                   ImageFile imageFile = new ImageFile(file.getName(),extension, createdDate,lastModifiedDate);
                   System.out.println(imageFile);
 
-              } else if (extension.equals("txt")) {
+              } else if (extension.equals("txt.txt")) {
                   TextFile textFile = new TextFile(file.getName(),extension, createdDate,lastModifiedDate);
                   System.out.println(textFile);
 
