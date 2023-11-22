@@ -7,6 +7,7 @@ public class QueueBehaviour {
     private Queue queue;
 
     public QueueBehaviour(Queue queue) {
+
         this.queue = queue;
     }
 
@@ -27,10 +28,16 @@ public class QueueBehaviour {
                     queue.enqueue(element);
                     break;
                 case 2:
-                    System.out.println("Dequeued element: " + queue.dequeue());
+                    int dequeuedInput = queue.dequeue();
+                    if (dequeuedInput != -1) {
+                        System.out.println("Dequeued input: " + dequeuedInput);
+                    }
                     break;
                 case 3:
-                    System.out.println("Peeked element: " + queue.peek());
+                    int peekedInput = queue.peek();
+                    if (peekedInput != -1) {
+                        System.out.println("Peeked element from queue: " + peekedInput);
+                    }
                     break;
                 case 0:
                     return;
