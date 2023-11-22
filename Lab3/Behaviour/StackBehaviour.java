@@ -29,10 +29,16 @@ public class StackBehaviour {
                     stack.push(element);
                     break;
                 case 2:
-                    System.out.println("Popped element: " + stack.pop());
+                        int poppedInput= stack.pop();
+                    if (poppedInput != -1) {
+                        System.out.println("Popped input: " + poppedInput);
+                    }
                     break;
                 case 3:
-                    System.out.println("Peeked element: " + stack.peek());
+                    int peekedInput = stack.peek();
+                    if (peekedInput != -1) {
+                        System.out.println("Peeked input: " + peekedInput);
+                    }
                     break;
                 case 0:
                     return;
